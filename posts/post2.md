@@ -1,5 +1,5 @@
 ---
-layout: post.html
+layout: layouts/post.html
 title: Blog Post 2
 tags: post
 ---
