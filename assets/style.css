@@ -1,3 +1,79 @@
-h1 {
-  color: red;
+/*== Global Resets ==*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*=== Global Styles ===*/
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+li.menu-item {
+  position: relative;
+  display: inline-block;
+  margin: 16px;
+}
+
+li.menu-item:hover > ul.submenu {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul.submenu {
+  position: absolute;
+  left: 0;
+  top: 150%;
+  width: 300px;
+  text-align: left;
+  background-color: #222222;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper {
+  width: 65%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header, footer {
+  background-color: lightgray;
+}
+
+/*=== Homepage Styles ===*/
+
+
+/*=== Page Styles ===*/
+
+
+/*=== Post Styles ===*/
+
+
+/*=== Media Queries ===*/

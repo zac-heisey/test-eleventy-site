@@ -1,0 +1,17 @@
+{
+  "title": "Test Eleventy Site",
+  "url": "#",
+  "description": "",
+  "author": "Zac Heisey",
+  "email": "test@aol.com",
+  "social": [
+    {
+      "account": "twitter",
+      "profile": "https://twitter.com/zac_heisey"
+    },
+    {
+      "account": "github",
+      "profile": "https://github.com/zac-heisey"
+    }
+  ]
+}

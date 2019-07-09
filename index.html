@@ -3,16 +3,9 @@ layout: layouts/page.html
 title: Test Eleventy Site
 ---
 
-<!-- Pull in data from _data directory -->
-<h2>From /_data Directory:</h2>
-{% for user in users %}
-<p>{{ user.user }} is {{ user.age }} years old.</p>
-{% endfor %}
 <!-- Pull in content from posts directory -->
 <h2>From /posts Directory:</h2>
 {% for post in collections.post %}
 <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
 <p>{{ post.templateContent }}</p>
 {% endfor %}
-
-<img src="assets/hwt-wireframes.png" alt="">

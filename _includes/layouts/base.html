@@ -5,8 +5,15 @@
   {% include partials/head.html %}
 
   <body>
-    <!-- Content from post or page -->
-    {{ content }}
+    <header>
+      <h1>{{ site.title }}</h1>
+      <!-- Navigation (_includes/partials/nav.html) -->
+      {% include partials/nav.html %}
+    </header>
+    <div class="wrapper">
+      <!-- Content from post or page -->
+      {{ content }}
+    </div>
 
     <!-- Footer (_includes/partials/footer.html) -->
     {% include partials/footer.html %}

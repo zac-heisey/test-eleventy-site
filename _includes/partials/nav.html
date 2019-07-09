@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    {% for link in nav %}
+    <li class="menu-item"><a href="{{ link.url }}">{{ link.name }}</a>
+      {% if link.submenu %}
+      <ul class="submenu">
+        {% for link in link.submenu %}
+        <li class="submenu-item"><a href="{{ link.url }}">{{ link.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
