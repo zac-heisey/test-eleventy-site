@@ -31,7 +31,6 @@ li.menu-item {
 }
 
 li.menu-item:hover > ul.submenu {
-  top: 100%;
   opacity: 1;
   visibility: visible;
 }
@@ -40,9 +39,10 @@ ul.submenu {
   position: absolute;
   left: 0;
   top: 150%;
-  width: 300px;
   text-align: left;
   background-color: #222222;
+  border-radius: 5px;
+  padding: 10px;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -51,6 +51,10 @@ ul.submenu {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+li.submenu-item {
+  margin-bottom: .25rem;
 }
 
 .wrapper {
