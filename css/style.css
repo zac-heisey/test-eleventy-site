@@ -19,6 +19,14 @@ body {
   justify-content: space-between;
 }
 
+img {
+  width: 30%;
+}
+
+h1, h2, h3 {
+  font-family: 'Major Mono Display', monospace;
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
@@ -40,7 +48,7 @@ ul.submenu {
   left: 0;
   top: 150%;
   text-align: left;
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.85);
   border-radius: 5px;
   padding: 10px;
   z-index: 9999;
@@ -59,7 +67,8 @@ li.submenu-item {
 
 .wrapper {
   width: 65%;
-  margin: 0 auto;
+  margin: 2rem auto 0;
+  flex-grow: 1;
 }
 
 header {

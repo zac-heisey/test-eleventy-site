@@ -4,8 +4,14 @@
     "url": "/"
   },
   {
-    "name": "README",
-    "url": "/readme"
+    "name": "About",
+    "url": "/about",
+    "submenu": [
+      {
+        "name": "README",
+        "url": "https://github.com/zac-heisey/test-eleventy-site/blob/master/README.md"
+      }
+    ]
   },
   {
     "name": "Blog",

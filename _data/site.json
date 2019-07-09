@@ -1,7 +1,8 @@
 {
   "title": "Test Eleventy Site",
   "url": "#",
-  "description": "",
+  "description": "This is a test site using Eleventy (11ty.io), a static site generator written in JavaScript.",
+  "logo": "/images/11ty-logo.png",
   "author": "Zac Heisey",
   "email": "test@aol.com",
   "social": [
