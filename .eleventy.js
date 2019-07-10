@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
 
   // Manual passthrough template extensions
   return {
-    templateFormats: ['md', 'html', 'yml', 'css', 'js'],
+    templateFormats: ['md', 'html', 'yml', 'css', 'js', 'liquid'],
     passthroughFileCopy: true
   };
 
