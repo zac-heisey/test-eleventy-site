@@ -1,10 +1,10 @@
 ---
 layout: layouts/page.html
+title: Home
 ---
 
-<!-- Pull in data from _data/site.json  -->
-## `From _data/site.json:`
+## weLComE!
 
-## {{ site.description }}
+### {{ site.description }}
 
 ![]({{ site.logo }})
