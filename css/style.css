@@ -27,10 +27,6 @@ body {
   justify-content: space-between;
 }
 
-main, article {
-  line-height: 1.75;
-}
-
 h1, h2, h3 {
   font-family: 'Major Mono Display', monospace;
 }
@@ -44,12 +40,6 @@ a:hover {
   border-bottom: 3px solid var(--primary-color);
   padding-bottom: 1px;
   transition: 0.2s ease;
-}
-
-.wrapper {
-  width: 65%;
-  margin: 2rem auto 0;
-  flex-grow: 1;
 }
 
 /* Header & Footer Styles */
@@ -89,7 +79,6 @@ ul.submenu {
   left: 0;
   top: 150%;
   min-width: 5rem;
-  border-top: 2px solid var(--secondary-color);
 	background-color: var(--primary-color);
   text-align: left;
   border-radius: 5px;
@@ -122,7 +111,17 @@ footer#eleventy-logo {
 	max-width: 30px;
 }
 
-/*== Page Styles ==*/
+/*== Page & Post Styles ==*/
+
+.wrapper {
+  width: 65%;
+  margin: 2rem auto 0;
+  flex-grow: 1;
+}
+
+main, article {
+  line-height: 1.75;
+}
 
 /* About Page */
 
@@ -131,32 +130,63 @@ img#eleventy-logo {
 	min-width: 100px;
 }
 
-
-/*== Post Styles ==*/
-
-
 /*== Media Queries ==*/
 
 @media screen and (max-width: 650px) {
 
-	#menu-icon {
+	/* Header */
+
+	header {
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	#header-title {
+		width: 50%;
+	}
+
+	/* Mobile Menu */
+
+	a#menu-icon {
 		display: block;
 		float: right;
 		width: 1.5rem;
 		padding-top: 1.5rem;
+		border: none;
 	}
 
 	.main-menu {
 		display: none;
 	}
 
-	#site-nav:hover .main-menu {
+	li.menu-item {
+		display: block;
+	}
+
+	.main-menu.show {
 		display: block;
 		position: absolute;
-		top: 74px;
+		top: 138px;
+		height: 50vh;
+		margin-top: 0;
 		left: 0;
 		width: 100vw;
 		background-color: var(--primary-color);
+	}
+
+	ul.submenu {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		background-color: transparent;
+		padding-bottom: 0;
+	}
+
+	/* Page & Post */
+
+	.wrapper {
+	  width: 100%;
+		padding: 0 1rem;
 	}
 
 }
