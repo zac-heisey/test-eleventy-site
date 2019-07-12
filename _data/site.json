@@ -1,20 +1,27 @@
 {
   "title": "Test Eleventy Site",
   "url": "#",
-  "description": "This is a test site using Eleventy (11ty.io), a static site generator written in JavaScript.",
+  "description": "This is a test site using Eleventy (11ty.io), a static site generator written in JavaScript. It is intended to be a boilerplate for future 11ty projects",
   "logo": "/images/11ty-logo.png",
   "author": "Zac Heisey",
   "email": "test@aol.com",
   "social": [
     {
-      "account": "twitter",
+      "account": "Twitter",
       "profile": "https://twitter.com/zac_heisey"
     },
     {
-      "account": "github",
+      "account": "GitHub",
       "profile": "https://github.com/zac-heisey"
     }
   ],
+  "details": {
+    "host": "Netlify",
+    "cms": "Coming Soon (Netlify CMS)",
+    "ecommerce": "Coming Soon",
+    "search": "Coming Soon",
+    "repo": "https://github.com/zac-heisey/test-eleventy-site"
+  },
   "staticgen": {
     "languages": ["JavaScript"],
     "templates": ["Liquid", "Nunjucks", "Handlebars", "Mustache", "EJS", "Haml", "Pug", "JavaScript", "HTML", "Markdown"],

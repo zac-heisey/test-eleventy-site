@@ -13,3 +13,5 @@ title: About
 **License:** {{ site.staticgen.license }}
 
 **Description:** {{ site.staticgen.description }}
+
+<img src="{{ site.logo }}" id="eleventy-logo">

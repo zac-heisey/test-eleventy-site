@@ -1,3 +1,10 @@
+/*== CSS Variables ==*/
+
+:root {
+	--primary-color: #222222; /* Dark Gray */
+  --secondary-color: #ffffff; /* White */
+}
+
 /*== Global Resets ==*/
 
 *, *:before, *:after {
@@ -9,9 +16,10 @@ html, body {
   padding: 0;
 }
 
-/*=== Global Styles ===*/
+/*== Global Styles ==*/
 
 body {
+  color: var(--primary-color);
   font-family: helvetica, arial, sans-serif;
   height: 100vh;
   display: flex;
@@ -19,17 +27,50 @@ body {
   justify-content: space-between;
 }
 
-img {
-  width: 30%;
+main, article {
+  line-height: 1.75;
 }
 
 h1, h2, h3 {
   font-family: 'Major Mono Display', monospace;
 }
 
-ul, ol {
+a {
+	color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 1px;
+  transition: 0.2s ease;
+}
+
+.wrapper {
+  width: 65%;
+  margin: 2rem auto 0;
+  flex-grow: 1;
+}
+
+/* Header & Footer Styles */
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header, footer {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+header ul, header ol {
   list-style: none;
   padding: 0;
+}
+
+#menu-icon {
+	display: none;
 }
 
 li.menu-item {
@@ -47,8 +88,10 @@ ul.submenu {
   position: absolute;
   left: 0;
   top: 150%;
+  min-width: 5rem;
+  border-top: 2px solid var(--secondary-color);
+	background-color: var(--primary-color);
   text-align: left;
-  background-color: rgba(34, 34, 34, 0.85);
   border-radius: 5px;
   padding: 10px;
   z-index: 9999;
@@ -62,31 +105,58 @@ ul.submenu {
 }
 
 li.submenu-item {
-  margin-bottom: .25rem;
+  margin-bottom: .65rem;
 }
 
-.wrapper {
-  width: 65%;
-  margin: 2rem auto 0;
-  flex-grow: 1;
+header a, footer a {
+	color: var(--secondary-color);
 }
 
-header {
-  display: flex;
-  justify-content: space-around;
+header a:hover, footer a:hover {
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 1px;
+  transition: 0.2s ease;
 }
 
-header, footer {
-  background-color: lightgray;
+footer#eleventy-logo {
+	max-width: 30px;
 }
 
-/*=== Homepage Styles ===*/
+/*== Page Styles ==*/
+
+/* About Page */
+
+img#eleventy-logo {
+  width: 20%;
+	min-width: 100px;
+}
 
 
-/*=== Page Styles ===*/
+/*== Post Styles ==*/
 
 
-/*=== Post Styles ===*/
+/*== Media Queries ==*/
 
+@media screen and (max-width: 650px) {
 
-/*=== Media Queries ===*/
+	#menu-icon {
+		display: block;
+		float: right;
+		width: 1.5rem;
+		padding-top: 1.5rem;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	#site-nav:hover .main-menu {
+		display: block;
+		position: absolute;
+		top: 74px;
+		left: 0;
+		width: 100vw;
+		background-color: var(--primary-color);
+	}
+
+}

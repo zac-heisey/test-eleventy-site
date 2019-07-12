@@ -18,12 +18,12 @@
     "url": "/blog",
     "submenu": [
       {
-        "name": "sub1",
-        "url": "/sub1"
+        "name": "Post 1",
+        "url": "/posts/post1"
       },
       {
-        "name": "sub2",
-        "url": "/sub2"
+        "name": "Post 2",
+        "url": "/posts/post2"
       }
     ]
   }

@@ -2,8 +2,11 @@
 permalink: /js/main.js
 ---
 
-function welcome() {
-  console.log('Hi, I\'m {{ site.author }}. Welcome to {{ site.title }}');
-}
+// Randomly change case of letters in header title
+var chance;
+var headerTitle = document.querySelector('#header-title');
 
-welcome();
+headerTitle.textContent = headerTitle.textContent.split('').map(function(letter) {
+  chance = Math.round(Math.random());
+  return letter = chance ? letter.toUpperCase() : letter.toLowerCase();
+}).join('');
