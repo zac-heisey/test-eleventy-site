@@ -1,9 +1,13 @@
-const TEST_VAR_1 = process.env.TEST_VAR_1;
-const TEST_VAR_2 = process.env.TEST_VAR_2;
+import fetch from "node-fetch";
+
+const API_URL = process.env.API_URL;
 
 exports.handler = async (event, context) => {
-  return {
-    statusCode: 200,
-    body: TEST_VAR_1 + TEST_VAR_2
-  };
+  return fetch(API_ENDPOINT, { headers: { "Accept": "application/json" } })
+    .then(response => response.json())
+    .then(data => ({
+      statusCode: 200,
+      body: data
+    }))
+    .catch(error => ({ statusCode: 422, body: String(error) }));
 };
