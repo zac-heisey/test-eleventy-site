@@ -1,6 +1,4 @@
-// const fetch = require('node-fetch');
-
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
 const API_ENDPOINT = "https://icanhazdadjoke.com/";
 
@@ -9,7 +7,7 @@ exports.handler = async (event, context) => {
     .then(response => response.json())
     .then(data => ({
       statusCode: 200,
-      body: data.joke
+      body: data
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };
